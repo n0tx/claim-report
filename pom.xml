@@ -11,7 +11,7 @@
 	<groupId>com.riki</groupId>
 	<artifactId>claim-report</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Aplikasi Laporan Klaim</name>
+	<name>Laporan Klaim</name>
 	<description>Aplikasi Laporan Klaim</description>
 	<url/>
 	<licenses>
