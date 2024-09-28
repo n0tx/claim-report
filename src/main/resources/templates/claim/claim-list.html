@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="eng"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{fragments/main_layout}">
+<body>
+	<div layout:fragment="content">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3">
+				<h5 class="m-0 font-weight-bold text-center">Daftar Klaim</h5>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<div id="dataTable_wrapper"
+						class="dataTables_wrapper dt-bootstrap4">
+						<div class="row">
+							<div class="col-sm-12">
+								<table class="table table-bordered dataTable small" id="dataTable"
+									role="grid" aria-describedby="dataTable_info"
+									style="width: 100%;">
+									<thead>
+										<tr>
+											<th>LOB</th>
+											<th>Penyebab Klaim</th>
+											<th>Jumlah Nasabah</th>
+											<th>Beban Klaim</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!--<tr th:each="claim:${claims}" style="background-color: #2196F3; color: white;">-->
+										<tr th:each="claim:${claims}">
+											<td th:text="${claim.subCob}"></td>
+											<td th:text="${claim.penyebabKlaim}"></td>
+											<td th:text="${claim.jumlahTerjamin}"></td>
+											<!--<td th:text="${claim.nilaiBebanKlaim}"></td>-->
+											<!-- <td th:text="${#numbers.formatCurrency(claim.nilaiBebanKlaim)}"></td> -->
+											<td th:text="${#strings.replace(#numbers.formatCurrency(claim.nilaiBebanKlaim), '$', '')}"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-body py-2 text-right">
+				<a th:href="@{/contact/new}" class="btn btn-success" role="button" style="font-size: 13px;">Send Data</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
