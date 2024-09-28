@@ -107,7 +107,7 @@ public class LaporanKlaimApplication implements CommandLineRunner {
 			claimRepository.save(new Claim(15L, "KBG dan Suretyship", "Macet", LocalDate.parse("2023-01-11"), cabangAmbon, LocalDate.parse("2023-01-09"), 2, 726572000, 1));
 			claimRepository.save(new Claim(16L, "KBG dan Suretyship", "Macet", LocalDate.parse("2023-01-11"), cabangAmbon, LocalDate.parse("2023-01-09"), 2, 2753352000.0, 1));
 			claimRepository.save(new Claim(17L, "KBG dan Suretyship", "Macet", LocalDate.parse("2023-01-11"), cabangAmbon, LocalDate.parse("2023-01-09"), 2, -726572000, -1));
-			claimRepository.save(new Claim(18L, "KBG dan Suretyshipz", "Macet", LocalDate.parse("2023-01-11"), cabangAmbon, LocalDate.parse("2023-01-09"), 2, -2753352000.0, -1));
+			claimRepository.save(new Claim(18L, "KBG dan Suretyship", "Macet", LocalDate.parse("2023-01-11"), cabangAmbon, LocalDate.parse("2023-01-09"), 2, -2753352000.0, -1));
 			claimRepository.save(new Claim(19L, "KBG dan Suretyship", "Macet", LocalDate.parse("2023-01-10"), cabangAmbon, LocalDate.parse("2023-01-09"), 1, 1376676000, 1));
 			claimRepository.save(new Claim(20L, "KBG dan Suretyship", "Macet", LocalDate.parse("2023-01-10"), cabangJakarta, LocalDate.parse("2023-01-09"), 2, 130570090, 1));
 			claimRepository.save(new Claim(21L, "KBG dan Suretyship", "Macet", LocalDate.parse("2023-01-10"), cabangKendari, LocalDate.parse("2023-01-10"), 1, 701862875, 1));

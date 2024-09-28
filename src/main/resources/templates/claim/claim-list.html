@@ -29,7 +29,8 @@
 									</thead>
 									<tbody>
 										<!--<tr th:each="claim:${claims}" style="background-color: #2196F3; color: white;">-->
-										<tr th:each="claim:${claims}">
+										<tr th:each="claim:${claims}"
+											th:style="${claim.subCob.contains('Subtotal') ? 'background-color: whitesmoke; font-weight:500;' : (claim.subCob.contains('Total') ? 'background-color: lightgrey;font-weight:700;' : '')}">
 											<td th:text="${claim.subCob}"></td>
 											<td th:text="${claim.penyebabKlaim}"></td>
 											<td th:text="${claim.jumlahTerjamin}"></td>

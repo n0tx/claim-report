@@ -1,11 +1,11 @@
 package com.riki.claim_report.service;
 
-import com.riki.claim_report.model.Claim;
+import com.riki.claim_report.dto.ClaimReportSummary;
 
 import java.util.List;
 
 public interface ClaimService {
 
-	public List<Claim> findClaimAll();
+	List<ClaimReportSummary> findClaimReportSummary();
 	
 }
