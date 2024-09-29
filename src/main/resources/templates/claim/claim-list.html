@@ -46,7 +46,9 @@
 				</div>
 			</div>
 			<div class="card-body py-2 text-right">
-				<a th:href="@{/contact/new}" class="btn btn-success" role="button" style="font-size: 13px;">Send Data</a>
+				<form th:action="@{/send-claims}" method="post" style="display:inline;">
+					<button type="submit" class="btn btn-success" style="font-size: 13px;">Send Data</button>
+				</form>
 			</div>
 		</div>
 	</div>

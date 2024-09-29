@@ -1,6 +1,8 @@
 package com.riki.claim_report.service.impl;
 
+import com.riki.claim_report.client.IntegrationReportClient;
 import com.riki.claim_report.dto.ClaimReportSummary;
+import com.riki.claim_report.dto.ClaimRequest;
 import com.riki.claim_report.dto.Summary;
 import com.riki.claim_report.model.Claim;
 import com.riki.claim_report.repository.ClaimRepository;
@@ -9,14 +11,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
 public class ClaimServiceImpl implements ClaimService {
+
 	@Autowired
 	private ClaimRepository claimRepository;
+
+	@Autowired
+	private IntegrationReportClient integrationReportClient;
 
 	@Override
 	public List<ClaimReportSummary> findClaimReportSummary() {
@@ -70,5 +77,30 @@ public class ClaimServiceImpl implements ClaimService {
 		claimReportSummaries.add(new ClaimReportSummary("Total ", "", totalJumlahTerjamin, totalNilaiBebanKlaim));
 		return claimReportSummaries;
 	}
+
+	@Override
+	public void sendDataClaim(Claim claim) {
+		ClaimRequest claimRequest = new ClaimRequest();
+		claimRequest.setLob(claim.getSubCob());
+		claimRequest.setPenyebabKlaim(claim.getPenyebabKlaim());
+		claimRequest.setPeriode(claim.getPeriode());
+		claimRequest.setNilaiBebanKlaim(claim.getNilaiBebanKlaim());
+
+		integrationReportClient.sendDataClaim(claimRequest);
+	}
+
+	@Override
+	public void sendListDataClaim(List<Claim> claims) {
+		for (Claim claim : claims) {
+			sendDataClaim(claim);
+		}
+	}
+
+	@Override
+	public List<Claim> getClaimsBySubCob() {
+		List<String> subCobList = Arrays.asList("PEN", "KUR");
+		return claimRepository.findBySubCobIn(subCobList);
+	}
+
 
 }

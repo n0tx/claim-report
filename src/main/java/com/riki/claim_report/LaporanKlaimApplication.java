@@ -7,11 +7,16 @@ import com.riki.claim_report.repository.WilkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.openfeign.FeignAutoConfiguration;
 
 import java.time.LocalDate;
 
 @SpringBootApplication
+@EnableFeignClients
+@ImportAutoConfiguration({FeignAutoConfiguration.class})
 public class LaporanKlaimApplication implements CommandLineRunner {
 
 	@Autowired

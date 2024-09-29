@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="eng"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{fragments/main_layout}">
+<body>
+	<div layout:fragment="content">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3">
+				<h5 class="m-0 font-weight-bold text-center">Kirim Data Klaim</h5>
+			</div>
+			<div class="card-body">
+				<h5 class="m-0 font-weight-bold text-center">Berhasil!</h5>
+				<h6 th:text="${message}"></h6>
+			</div>
+			<div class="card-body py-2 text-right">
+				<a th:href="@{/}" ><< Daftar Klaim</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
