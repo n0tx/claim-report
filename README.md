@@ -47,6 +47,12 @@ https://github.com/n0tx/integration-report
 
 ![image](https://github.com/user-attachments/assets/2ecf26cc-0e74-43b1-844a-37c92f76fd87)
 
+
+- Data klaim berdasarkan `LOB` = `KUR, PEN` berhasil dibuat pada Aplikasi Integration Report
+
+![image](https://github.com/user-attachments/assets/0cc05280-cf77-4dcb-b203-6b92dfc9dc47)
+
+
 ### Log Aktifitas Pengiriman Data
 
 - Log ketika aplikasi (claim-report) mengirim data klaim ke aplikasi eksternal (integration-report) berhasil
