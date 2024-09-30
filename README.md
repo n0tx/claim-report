@@ -22,7 +22,7 @@
 - Data yang sudah di inisialisasi ketika aplikasi pertama kali dijalankan
 
 
-## Bagaimana cara menjalankan aplikasi
+## Bagaimana menjalankan aplikasi
 - Git clone
 ```
 $git clone https://github.com/n0tx/claim-report.git
