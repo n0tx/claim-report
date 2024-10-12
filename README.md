@@ -1,6 +1,7 @@
 # Aplikasi Laporan Klaim
 
-![image](https://github.com/user-attachments/assets/d19a3e9d-bb4c-4e20-9d88-48bdeab25cfe)
+![image](https://github.com/user-attachments/assets/11c7626b-2b49-4cda-80b0-c8d63166fc1a)
+
 
 - Java 17
 - Spring Boot
